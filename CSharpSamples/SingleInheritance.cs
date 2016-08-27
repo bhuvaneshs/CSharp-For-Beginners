@@ -9,35 +9,37 @@ namespace CSharpSamples
     {
         public static void Main()
         {
-            Rectangle rect = new Rectangle();
-            rect.setWidth(5);
-            rect.setHeight(5);
+            User user = new User();
+            Console.WriteLine("Enter the Firstname :");
+            string firstname = Console.ReadLine();
+            Console.WriteLine("Enter the Lastname :");
+            string lastname = Console.ReadLine();
 
-            Console.WriteLine("The area of a rectangle is :" + rect.getArea());
+            Console.WriteLine("User fullname is :" +firstname+" "+lastname);
             Console.ReadLine();
         }
     }
 
-    public class Shape  // Class for creating logic to get and set properties.
+    public class Users  // Class for creating logic to get and set properties.
     {
-        protected int width;
-        protected int height;
+        protected string firstname;
+        protected string lastname;
 
-        public void setWidth(int w)
+        public void setFirstname(string fname)
         {
-            width = w;
+            firstname = fname;
         }
-        public void setHeight(int h)
+        public void setLastname(string lname)
         {
-            height = h;
+            lastname = lname;
         }
     }
 
-    public class Rectangle : Shape   //Implemeting single inheritance
+    public class User : Users   //Implemeting single inheritance
     {
-        public int getArea()
+        public string getFullName()
         {
-            return (width * height);
+            return firstname +" "+lastname;
         }
     }
 }
