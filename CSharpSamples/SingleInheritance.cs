@@ -18,7 +18,7 @@ namespace CSharpSamples
         }
     }
 
-    public class Shape
+    public class Shape  // Class for creating logic to get and set properties.
     {
         protected int width;
         protected int height;
@@ -33,7 +33,7 @@ namespace CSharpSamples
         }
     }
 
-    public class Rectangle : Shape
+    public class Rectangle : Shape   //Implemeting single inheritance
     {
         public int getArea()
         {
